@@ -8,14 +8,12 @@ import { createStore, combineReducers } from 'redux';
 import App from './components/app';
 import '../assets/stylesheets/application.scss';
 import { cityListReducer } from './reducers/cityListReducer';
-import { selectedCityReducer } from './reducers/selectedCityReducer';
 import { activeCityReducer } from './reducers/activeCityReducer';
 
 
 // State and reducers
 const reducers = combineReducers({
   cityList: cityListReducer,
-  selectedCity: selectedCityReducer,
   activeCity: activeCityReducer
 });
 

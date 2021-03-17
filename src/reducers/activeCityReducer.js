@@ -5,7 +5,7 @@ export const setActiveCity = (city) => {
   };
 };
 
-const initialActiveCity = null;
+const initialActiveCity = { name: "Click a city" };
 export const activeCityReducer = (activeCityState = initialActiveCity, action) => {
   switch (action.type) {
     case 'set-active-city':

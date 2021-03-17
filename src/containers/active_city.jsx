@@ -1,25 +1,15 @@
 import React from 'react';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { setActiveCity } from '../reducers/activeCityReducer';
 
-
-class ActiveCity extends React.Component {
-
-  render() {
-    return (
-      <div>
-        <h1{props.activeCity.name}</h1>
-      </div>
-    );
-  }
-}
-
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({
-    setActiveCity
-  },
-  dispatch
+const ActiveCity = (props) => {
+  return (
+    <div>
+      <h1>{props.activeCity.name}</h1>
+      <img
+        src={`https://kitt.lewagon.com/placeholder/cities/${props.activeCity.slug}`}
+        alt={props.activeCity.name}
+      />
+    </div>
   );
 };
 
@@ -29,4 +19,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ActiveCity);
+export default connect(mapStateToProps, null)(ActiveCity);

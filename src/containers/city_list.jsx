@@ -8,7 +8,6 @@ class CityList extends React.Component {
   componentWillMount() {
     this.props.getCities();
   }
-
   render() {
     return (
       <div>
